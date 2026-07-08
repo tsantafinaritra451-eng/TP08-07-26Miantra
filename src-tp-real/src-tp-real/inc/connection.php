@@ -4,7 +4,7 @@ function dbconnect()
     static $connect = null;
 
     if ($connect === null) {
-        $connect = mysqli_connect('localhost', 'root', 'root', 'employees');
+        $connect = mysqli_connect('localhost', 'root', '', 'employees');
 
         if (!$connect) {
             // Arrête le script et affiche une erreur si la connexion échoue
