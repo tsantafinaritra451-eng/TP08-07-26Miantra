@@ -1,0 +1,85 @@
+/* =====================================================================
+   THÈME 1 — CORPORATE
+   Style clair, bleu, dense : adapté à une application de gestion.
+   Mêmes classes que les autres thèmes (.navbar .table .btn .card ...).
+   ===================================================================== */
+
+:root {
+    --color-primary:   #0f4c81;
+    --color-primary-d: #0b365c;
+    --color-text:      #1b2733;
+    --color-muted:     #5b6b7b;
+    --color-border:    #d3dce6;
+    --color-bg:        #eef2f6;
+    --color-surface:   #ffffff;
+    --color-success:   #1a7f4b;
+    --color-error:     #c0392b;
+    --radius:   4px;
+    --space:    16px;
+    --max-width: 1000px;
+}
+
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--color-text);
+    background: var(--color-bg);
+    line-height: 1.5;
+}
+a { color: var(--color-primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; }
+
+.container { max-width: var(--max-width); margin: 0 auto; padding: var(--space); }
+
+/* Menu : barre pleine bleue */
+.navbar { background: var(--color-primary); padding: 0 var(--space); }
+.navbar ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; }
+.navbar .brand { color: #fff; font-weight: 700; padding: 12px var(--space) 12px 0; }
+.navbar a { display: inline-block; padding: 14px var(--space); color: #cfe0f0; }
+.navbar a:hover, .navbar a.active { background: var(--color-primary-d); color: #fff; text-decoration: none; }
+
+.btn {
+    display: inline-block; padding: 8px 16px; border: 1px solid var(--color-primary);
+    border-radius: var(--radius); background: var(--color-primary); color: #fff;
+    font-size: .95rem; cursor: pointer; text-decoration: none;
+}
+.btn:hover { background: var(--color-primary-d); text-decoration: none; }
+.btn-secondary { background: #fff; color: var(--color-primary); }
+.btn-secondary:hover { background: var(--color-bg); }
+
+.table {
+    width: 100%; border-collapse: collapse; background: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+.table th, .table td { text-align: left; padding: 9px 12px; border: 1px solid var(--color-border); }
+.table th { background: #dce6f0; font-weight: 600; }
+.table tr:hover td { background: #f4f8fc; }
+
+.list { list-style: none; margin: 0; padding: 0; background: var(--color-surface); border: 1px solid var(--color-border); }
+.list li { padding: 10px 12px; border-bottom: 1px solid var(--color-border); }
+.list li:last-child { border-bottom: none; }
+
+.card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space); margin-bottom: var(--space); }
+.card h2, .card h3 { margin-top: 0; }
+
+.form-group { margin-bottom: var(--space); }
+.form-group label { display: block; margin-bottom: 4px; font-weight: 600; }
+.form-control { width: 100%; max-width: 360px; padding: 8px 10px; border: 1px solid var(--color-border); border-radius: var(--radius); font-size: 1rem; }
+.form-inline { display: flex; flex-wrap: wrap; gap: var(--space); align-items: flex-end; }
+.form-check { display: flex; align-items: center; gap: 8px; }
+.form-check input { width: auto; }
+
+.alert { padding: 10px 14px; border-radius: var(--radius); margin-bottom: var(--space); border: 1px solid transparent; }
+.alert-success { color: var(--color-success); background: #e8f5ee; border-color: #b6dec8; }
+.alert-error { color: var(--color-error); background: #fbeae8; border-color: #f1c4bd; }
+
+.pagination { display: flex; gap: 6px; align-items: center; margin-top: var(--space); }
+.pagination a, .pagination span { padding: 6px 12px; border: 1px solid var(--color-border); background: var(--color-surface); }
+.pagination a:hover { background: var(--color-bg); text-decoration: none; }
+.pagination .current { background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
+
+.text-muted { color: var(--color-muted); }
+.mt { margin-top: var(--space); }
+.mb { margin-bottom: var(--space); }

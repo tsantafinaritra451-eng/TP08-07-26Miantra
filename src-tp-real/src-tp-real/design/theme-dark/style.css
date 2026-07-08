@@ -1,0 +1,88 @@
+/* =====================================================================
+   THÈME 2 — DARK
+   Mode sombre, accents violets, coins arrondis. Mêmes classes.
+   ===================================================================== */
+
+:root {
+    --color-primary:   #8b5cf6;
+    --color-primary-d: #7c3aed;
+    --color-text:      #e5e7eb;
+    --color-muted:     #9ca3af;
+    --color-border:    #303746;
+    --color-bg:        #0f1420;
+    --color-surface:   #1a2030;
+    --color-success:   #34d399;
+    --color-error:     #f87171;
+    --radius:   10px;
+    --space:    16px;
+    --max-width: 1000px;
+}
+
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+    color: var(--color-text);
+    background: var(--color-bg);
+    line-height: 1.55;
+}
+a { color: var(--color-primary); text-decoration: none; }
+a:hover { color: #c4b5fd; }
+h1, h2, h3 { color: #f3f4f6; }
+
+.container { max-width: var(--max-width); margin: 0 auto; padding: var(--space); }
+
+.navbar { background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 0 var(--space); }
+.navbar ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+.navbar .brand { color: #fff; font-weight: 700; padding-right: var(--space); }
+.navbar a { display: inline-block; padding: 12px var(--space); color: var(--color-muted); border-radius: var(--radius); }
+.navbar a:hover, .navbar a.active { color: #fff; background: var(--color-primary-d); }
+
+.btn {
+    display: inline-block; padding: 9px 18px; border: 1px solid var(--color-primary);
+    border-radius: var(--radius); background: var(--color-primary); color: #fff;
+    font-size: .95rem; cursor: pointer; text-decoration: none;
+}
+.btn:hover { background: var(--color-primary-d); }
+.btn-secondary { background: transparent; color: var(--color-primary); }
+.btn-secondary:hover { background: rgba(139,92,246,.15); }
+
+.table {
+    width: 100%; border-collapse: collapse; background: var(--color-surface);
+    border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden;
+}
+.table th, .table td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--color-border); }
+.table th { background: #232b3d; font-weight: 600; }
+.table tr:last-child td { border-bottom: none; }
+.table tr:hover td { background: #222a3a; }
+
+.list { list-style: none; margin: 0; padding: 0; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; }
+.list li { padding: 11px 14px; border-bottom: 1px solid var(--color-border); }
+.list li:last-child { border-bottom: none; }
+
+.card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space); margin-bottom: var(--space); }
+.card h2, .card h3 { margin-top: 0; }
+
+.form-group { margin-bottom: var(--space); }
+.form-group label { display: block; margin-bottom: 4px; font-weight: 600; }
+.form-control {
+    width: 100%; max-width: 360px; padding: 9px 11px;
+    border: 1px solid var(--color-border); border-radius: var(--radius);
+    background: #11161f; color: var(--color-text); font-size: 1rem;
+}
+.form-inline { display: flex; flex-wrap: wrap; gap: var(--space); align-items: flex-end; }
+.form-check { display: flex; align-items: center; gap: 8px; }
+.form-check input { width: auto; }
+
+.alert { padding: 11px 14px; border-radius: var(--radius); margin-bottom: var(--space); border: 1px solid transparent; }
+.alert-success { color: var(--color-success); background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.4); }
+.alert-error { color: var(--color-error); background: rgba(248,113,113,.12); border-color: rgba(248,113,113,.4); }
+
+.pagination { display: flex; gap: 8px; align-items: center; margin-top: var(--space); }
+.pagination a, .pagination span { padding: 6px 12px; border: 1px solid var(--color-border); border-radius: var(--radius); background: var(--color-surface); }
+.pagination a:hover { background: #222a3a; }
+.pagination .current { background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
+
+.text-muted { color: var(--color-muted); }
+.mt { margin-top: var(--space); }
+.mb { margin-bottom: var(--space); }
